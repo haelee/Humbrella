@@ -1,4 +1,4 @@
-# Umbrella Dropper
+# Humbrella - Umbrella Dropper w/ HWP Support
 
 Copyright 2017 Umbrella
 Written by: * **Alisson Moretto** - [4w4k3](https://github.com/4w4k3)
@@ -25,7 +25,7 @@ Taken from [LICENSE](LICENSE).
 - Download executable on target system.
 - Silent execution.
 - Download and execute executable once time.
-- If the exe already had downloaded and running, open only pdf/docx/xxls/jpg/png.
+- If the exe already had downloaded and running, open only pdf/docx/xxls/jpg/png/hwp.
 - Some Phishing methods are included.
 - Multiple Session disabled.
 - Bypass UAC.
