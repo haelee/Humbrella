@@ -51,7 +51,7 @@ Taken from [LICENSE](LICENSE).
 
 ### Cloning:
 ```
-git clone https://github.com/4w4k3/Umbrella.git
+git clone https://github.com/haelee/Humbrella.git
 ```
 ### Running:
 ```
@@ -82,7 +82,7 @@ python2.7 umbrella.py
 
 
 ### Screenshot:
-![Shot](https://github.com/4w4k3/Umbrella/blob/master/Screens/shot.png)
+![Shot](https://github.com/haelee/Humbrella/blob/master/Screens/shot.png)
 
 More in [Screens](Screens)
 
@@ -91,6 +91,7 @@ Send me more features if you want it :D
 
 ### Contact:
 **4w4k3@protonmail.com**
+**whichmeans@gmail.com** (HWP)
 
 ## License:
 
